@@ -10,6 +10,8 @@ morgan.token('body-content', function(req, res) { return  JSON.stringify(req.bod
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time :body-content'))
 
+app.use(express.static('dist'))
+
 
 
 let notes = [  
