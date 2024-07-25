@@ -8,6 +8,7 @@ app.use(cors())
 
 morgan.token('tiny2', function (req, res) { return JSON.stringify(req.body) })
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :tiny2'))
+app.use(express.static('dist'))
 
 
 let persons = [
